@@ -6,7 +6,7 @@ const Footer = () => (
   <Box sx={{ backgroundColor: '#f5f5f5', py: 4 }}>
     <Container maxWidth="md">
       <Typography variant="body2" color="textSecondary" align="center">
-        © {new Date().getFullYear()} MyBrand. All rights reserved.
+        © {new Date().getFullYear()} PythonBootCamp. All rights reserved.
       </Typography>
       <Box sx={{ textAlign: 'center', mt: 2 }}>
         <Link href="#" sx={{ mx: 1 }}>

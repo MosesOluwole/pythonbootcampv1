@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import { Helmet } from 'react-helmet';
 import WhyJoin from './components/WhyJoin';
 import CareerOpportunities from './components/CareerOpportunities';
+import Contact from './components/Contact';
+import CourseDetails from './components/CourseDetails';
 
 function App() {
   return (
@@ -18,10 +20,12 @@ function App() {
       <NavBar />
       <HeroSection />
       <Features />
+      <CourseDetails /> {/* Include the CourseDetails component here */}
       <WhyJoin />
       <CareerOpportunities />
       {/* <Testimonials />
       <Pricing /> */}
+      <Contact />
       <Footer />
     </>
   );

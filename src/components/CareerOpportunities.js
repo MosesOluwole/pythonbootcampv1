@@ -49,7 +49,7 @@ const CareerOpportunities = () => (
         ))}
       </Grid>
       <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <Button variant="contained" color="primary" href="#register">
+        <Button variant="contained" color="primary" href="#contact">
           Start Your Journey
         </Button>
       </Box>
