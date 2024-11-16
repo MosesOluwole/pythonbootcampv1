@@ -8,19 +8,19 @@ const benefits = [
     icon: <Build fontSize="large" color="primary" />,
     title: 'Hands-on Projects',
     description: 'Apply your skills in real-world scenarios.',
-    image: '/images/hands-on.jpg',
+    image: 'projects.jpg',
   },
   {
     icon: <School fontSize="large" color="primary" />,
     title: 'Expert Instructors',
     description: 'Learn from industry professionals.',
-    image: '/images/expert-instructors.jpg',
+    image: 'teachers.jpg',
   },
   {
     icon: <Verified fontSize="large" color="primary" />,
     title: 'Certificate Upon Completion',
     description: 'Earn a certificate to showcase your skills.',
-    image: '/images/certificate.jpg',
+    image: 'certificate.jpg',
   },
 ];
 

@@ -6,17 +6,17 @@ const careers = [
   {
     title: 'Software Developer',
     description: 'Build applications in various industries.',
-    image: '/images/software-developer.jpg',
+    image: 'hero.jpg',
   },
   {
     title: 'Data Analyst',
     description: 'Analyze data to drive business decisions.',
-    image: '/images/data-analyst.jpg',
+    image: 'dataanalyst.jpg',
   },
   {
     title: 'AI & Machine Learning Engineer',
     description: 'Develop intelligent systems and models.',
-    image: '/images/ai-engineer.jpg',
+    image: 'ai.jpg',
   },
 ];
 
