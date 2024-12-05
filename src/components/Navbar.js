@@ -13,6 +13,7 @@ import {
   Box,
   useTheme,
   useMediaQuery,
+  Link,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -23,11 +24,10 @@ const NavBar = () => {
 
   const navLinks = [
     { title: "What You'll Learn", path: '#features' },
-    { title: 'Course Details', path: '#course-details' },
     { title: 'Why Join?', path: '#why-join' },
     { title: 'Careers', path: '#careers' },
-    // { title: 'Register', path: '#register' },
-    { title: 'Contact', path: '#contact' },
+    { title: 'Register', path: '#register' },
+    { title: 'FAQs', path: '#faqs' },
   ];
 
   const handleDrawerToggle = () => {
@@ -41,7 +41,7 @@ const NavBar = () => {
       role="presentation"
     >
       <Typography variant="h6" sx={{ my: 2, textAlign: 'center' }}>
-        PYTHONBOOTCAMP
+        CodeWithMide
       </Typography>
       <List>
         {navLinks.map((item, index) => (
@@ -55,15 +55,10 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar
-        position="sticky" // Changed from "static" or "relative" to "sticky"
-        color="default"
-        elevation={4}
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-      >
+      <AppBar position="sticky" color="default" elevation={4}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            PYTHONBOOTCAMP
+          CodeWithMide
           </Typography>
           {isMobile ? (
             <IconButton
@@ -84,14 +79,7 @@ const NavBar = () => {
         </Toolbar>
       </AppBar>
 
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
-      >
+      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle}>
         {drawerContent}
       </Drawer>
     </>

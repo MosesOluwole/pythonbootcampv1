@@ -1,6 +1,12 @@
 // src/components/Features.js
 import React from 'react';
-import { Container, Grid, Typography, Paper } from '@mui/material';
+import {
+  Container,
+  Grid,
+  Typography,
+  Paper,
+  Box,
+} from '@mui/material';
 import {
   Code,
   Storage,
@@ -32,24 +38,31 @@ const features = [
 ];
 
 const Features = () => (
-  <Container maxWidth="md" sx={{ py: 8 }} id="features">
-    <Typography variant="h4" align="center" gutterBottom>
-      What You'll Learn
-    </Typography>
-    <Grid container spacing={4}>
-      {features.map((feature, index) => (
-        <Grid item xs={12} md={6} key={index}>
-          <Paper elevation={0} sx={{ textAlign: 'center', p: 4 }}>
-            {feature.icon}
-            <Typography variant="h6" gutterBottom>
-              {feature.title}
-            </Typography>
-            <Typography variant="body1">{feature.description}</Typography>
-          </Paper>
-        </Grid>
-      ))}
-    </Grid>
-  </Container>
+  <Box sx={{ py: 8 }} id="features">
+    <Container maxWidth="md">
+      <Typography variant="h4" align="center" gutterBottom>
+        What You'll Learn
+      </Typography>
+      <Grid container spacing={4}>
+        {features.map((feature, index) => (
+          <Grid item xs={12} md={6} key={index}>
+            <Paper
+              elevation={0}
+              sx={{ textAlign: 'center', p: 4 }}
+            >
+              {feature.icon}
+              <Typography variant="h6" gutterBottom>
+                {feature.title}
+              </Typography>
+              <Typography variant="body1">
+                {feature.description}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  </Box>
 );
 
 export default Features;

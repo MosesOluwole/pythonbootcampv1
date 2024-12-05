@@ -1,6 +1,14 @@
 // src/components/WhyJoin.js
 import React from 'react';
-import { Container, Grid, Typography, Card, CardContent, CardMedia, Box } from '@mui/material';
+import {
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Box,
+} from '@mui/material';
 import { Build, School, Verified } from '@mui/icons-material';
 
 const benefits = [
@@ -8,19 +16,19 @@ const benefits = [
     icon: <Build fontSize="large" color="primary" />,
     title: 'Hands-on Projects',
     description: 'Apply your skills in real-world scenarios.',
-    image: 'projects.jpg',
+    image: '/projects.jpg',
   },
   {
     icon: <School fontSize="large" color="primary" />,
     title: 'Expert Instructors',
     description: 'Learn from industry professionals.',
-    image: 'teachers.jpg',
+    image: '/teachers.jpg',
   },
   {
     icon: <Verified fontSize="large" color="primary" />,
     title: 'Certificate Upon Completion',
     description: 'Earn a certificate to showcase your skills.',
-    image: 'certificate.jpg',
+    image: '/certificate.jpg',
   },
 ];
 
@@ -33,7 +41,17 @@ const WhyJoin = () => (
       <Grid container spacing={4}>
         {benefits.map((benefit, index) => (
           <Grid item xs={12} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, mx: 'auto', '&:hover': { boxShadow: 6 } }}>
+            <Card
+              sx={{
+                maxWidth: 345,
+                mx: 'auto',
+                transition: 'transform 0.3s',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: 6,
+                },
+              }}
+            >
               <CardMedia
                 component="img"
                 height="180"
@@ -47,7 +65,11 @@ const WhyJoin = () => (
                 <Typography variant="h6" gutterBottom align="center">
                   {benefit.title}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" align="center">
+                <Typography
+                  variant="body2"
+                  color="textSecondary"
+                  align="center"
+                >
                   {benefit.description}
                 </Typography>
               </CardContent>

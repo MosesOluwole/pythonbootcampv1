@@ -21,7 +21,7 @@ const HeroSection = () => {
         <Typography variant="h5" paragraph>
           Learn to Code with Python – From Basics to Full-Stack Development
         </Typography>
-        <Button variant="contained" color="primary" href="#contact">
+        <Button variant="contained" color="primary" href="#register">
           Enroll Now
         </Button>
       </Container>

@@ -58,7 +58,7 @@ const CourseDetails = () => {
             variant="contained"
             color="secondary"
             size="large"
-            href="#register"
+            href="/enroll"
             sx={{ mt: 2 }}
           >
             Enroll Now

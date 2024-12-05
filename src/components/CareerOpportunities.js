@@ -1,22 +1,31 @@
 // src/components/CareerOpportunities.js
 import React from 'react';
-import { Container, Grid, Typography, Card, CardContent, CardMedia, Box, Button } from '@mui/material';
+import {
+  Container,
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Box,
+  Button,
+} from '@mui/material';
 
 const careers = [
   {
     title: 'Software Developer',
     description: 'Build applications in various industries.',
-    image: 'hero.jpg',
+    image: '/hero.jpg',
   },
   {
     title: 'Data Analyst',
     description: 'Analyze data to drive business decisions.',
-    image: 'dataanalyst.jpg',
+    image: '/dataanalyst.jpg',
   },
   {
     title: 'AI & Machine Learning Engineer',
     description: 'Develop intelligent systems and models.',
-    image: 'ai.jpg',
+    image: '/ai.jpg',
   },
 ];
 
@@ -29,7 +38,17 @@ const CareerOpportunities = () => (
       <Grid container spacing={4}>
         {careers.map((career, index) => (
           <Grid item xs={12} md={4} key={index}>
-            <Card sx={{ maxWidth: 345, mx: 'auto', '&:hover': { boxShadow: 6 } }}>
+            <Card
+              sx={{
+                maxWidth: 345,
+                mx: 'auto',
+                transition: 'transform 0.3s',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: 6,
+                },
+              }}
+            >
               <CardMedia
                 component="img"
                 height="180"
@@ -49,7 +68,7 @@ const CareerOpportunities = () => (
         ))}
       </Grid>
       <Box sx={{ textAlign: 'center', mt: 4 }}>
-        <Button variant="contained" color="primary" href="#contact">
+        <Button variant="contained" color="primary" href="#register">
           Start Your Journey
         </Button>
       </Box>
