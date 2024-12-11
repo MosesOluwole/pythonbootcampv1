@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Python Programming Course | MyBrand</title>
+        <title>Python Programming Course | CodeWithMide</title>
         <meta
           name="description"
           content="Learn to code with our comprehensive Python bootcamp."
