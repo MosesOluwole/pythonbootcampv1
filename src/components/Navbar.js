@@ -1,5 +1,5 @@
 // src/components/NavBar.js
-import React from 'react';
+import React from "react";
 import {
   AppBar,
   Toolbar,
@@ -14,20 +14,20 @@ import {
   useTheme,
   useMediaQuery,
   Link,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const navLinks = [
-    { title: "What You'll Learn", path: '#features' },
-    { title: 'Why Join?', path: '#why-join' },
-    { title: 'Careers', path: '#careers' },
-    { title: 'Register', path: '#register' },
-    { title: 'FAQs', path: '#faqs' },
+    { title: "What You'll Learn", path: "#features" },
+    { title: "Why Join?", path: "#why-join" },
+    { title: "Careers", path: "#careers" },
+    { title: "Register", path: "#register" },
+    { title: "FAQs", path: "#faqs" },
   ];
 
   const handleDrawerToggle = () => {
@@ -35,12 +35,8 @@ const NavBar = () => {
   };
 
   const drawerContent = (
-    <Box
-      sx={{ width: 250 }}
-      onClick={handleDrawerToggle}
-      role="presentation"
-    >
-      <Typography variant="h6" sx={{ my: 2, textAlign: 'center' }}>
+    <Box sx={{ width: 250 }} onClick={handleDrawerToggle} role="presentation">
+      <Typography variant="h6" sx={{ my: 2, textAlign: "center" }}>
         CodeWithMide
       </Typography>
       <List>
@@ -55,10 +51,10 @@ const NavBar = () => {
 
   return (
     <>
-      <AppBar position="sticky" color="default" elevation={4}>
+      <AppBar position="sticky" color="primary" elevation={4}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          CodeWithMide
+            CodeWithMide
           </Typography>
           {isMobile ? (
             <IconButton

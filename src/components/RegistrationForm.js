@@ -1,5 +1,5 @@
 // src/components/RegistrationForm.js
-import React from 'react';
+import React from "react";
 import {
   Container,
   Typography,
@@ -8,9 +8,9 @@ import {
   Box,
   Grid,
   CircularProgress,
-} from '@mui/material';
-import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
+} from "@mui/material";
+import { useForm } from "react-hook-form";
+import emailjs from "emailjs-com";
 
 const RegistrationForm = () => {
   const [loading, setLoading] = React.useState(false);
@@ -29,20 +29,25 @@ const RegistrationForm = () => {
 
     emailjs
       .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        data,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          fullName: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          experience: data.experience,
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
           setSuccess(true);
           reset();
         },
         (err) => {
-          console.error('FAILED...', err);
-          alert('An error occurred. Please try again.');
+          console.error("FAILED...", err);
+          alert("An error occurred. Please try again.");
         }
       )
       .finally(() => {
@@ -61,17 +66,15 @@ const RegistrationForm = () => {
           <Typography variant="h4" align="center" gutterBottom>
             Register for the Python Bootcamp
           </Typography>
-          <Box
-            component="form"
-            noValidate
-            onSubmit={handleSubmit(onSubmit)}
-          >
+          <Box component="form" noValidate onSubmit={handleSubmit(onSubmit)}>
             <Grid container spacing={2}>
               {/* Full Name Field */}
               <Grid item xs={12}>
                 <TextField
                   label="Full Name"
-                  {...register('fullName', { required: 'Full Name is required' })}
+                  {...register("fullName", {
+                    required: "Full Name is required",
+                  })}
                   fullWidth
                   error={!!errors.fullName}
                   helperText={errors.fullName?.message}
@@ -81,11 +84,11 @@ const RegistrationForm = () => {
               <Grid item xs={12}>
                 <TextField
                   label="Email Address"
-                  {...register('email', {
-                    required: 'Email Address is required',
+                  {...register("email", {
+                    required: "Email Address is required",
                     pattern: {
                       value: /^\S+@\S+$/i,
-                      message: 'Enter a valid email',
+                      message: "Enter a valid email",
                     },
                   })}
                   fullWidth
@@ -97,7 +100,9 @@ const RegistrationForm = () => {
               <Grid item xs={12}>
                 <TextField
                   label="Phone Number"
-                  {...register('phone', { required: 'Phone Number is required' })}
+                  {...register("phone", {
+                    required: "Phone Number is required",
+                  })}
                   fullWidth
                   error={!!errors.phone}
                   helperText={errors.phone?.message}
@@ -107,7 +112,7 @@ const RegistrationForm = () => {
               <Grid item xs={12}>
                 <TextField
                   label="Previous Programming Experience"
-                  {...register('experience')}
+                  {...register("experience")}
                   multiline
                   rows={4}
                   fullWidth
@@ -123,7 +128,7 @@ const RegistrationForm = () => {
                   disabled={loading}
                   startIcon={loading && <CircularProgress size={20} />}
                 >
-                  {loading ? 'Submitting...' : 'Submit Registration'}
+                  {loading ? "Submitting..." : "Submit Registration"}
                 </Button>
               </Grid>
             </Grid>
