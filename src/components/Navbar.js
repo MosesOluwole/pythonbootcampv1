@@ -36,7 +36,16 @@ const NavBar = () => {
 
   const drawerContent = (
     <Box sx={{ width: 250 }} onClick={handleDrawerToggle} role="presentation">
-      <Typography variant="h6" sx={{ my: 2, textAlign: "center" }}>
+      <Typography
+        variant="h6"
+        sx={{ my: 2, textAlign: "center" }}
+        href="#"
+        component="a"
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+        }}
+      >
         CodeWithMide
       </Typography>
       <List>
@@ -53,7 +62,16 @@ const NavBar = () => {
     <>
       <AppBar position="sticky" color="primary" elevation={4}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            sx={{ flexGrow: 1 }}
+            href="#"
+            component="a"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
             CodeWithMide
           </Typography>
           {isMobile ? (
