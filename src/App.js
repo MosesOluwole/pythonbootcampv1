@@ -1,7 +1,7 @@
 // src/App.js
 import React from "react";
 import { Helmet } from "react-helmet";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Features from "./components/Features";
 import WhyJoin from "./components/WhyJoin";

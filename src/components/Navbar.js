@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const NavBar = () => {
+const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -100,4 +100,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
