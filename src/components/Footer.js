@@ -7,6 +7,7 @@ import {
   LinkedIn,
   WhatsApp,
   Telegram,
+  Instagram,
 } from "@mui/icons-material";
 
 const Footer = () => (
@@ -30,6 +31,9 @@ const Footer = () => (
             <Link href="https://linkedin.com" color="inherit" sx={{ mx: 1 }}>
               <LinkedIn />
             </Link>
+            <Link href="https://instagram.com" color="inherit" sx={{ mx: 1 }}>
+              <Instagram />
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -38,13 +42,13 @@ const Footer = () => (
           </Typography>
           <Typography variant="body2">
             Email:{" "}
-            <Link href="mailto:info@CodeWithMide.com" color="inherit">
+            <Link href="mailto:oluwolemoses@gmail.com" color="inherit">
               info@CodeWithMide.com
             </Link>
           </Typography>
           <Typography variant="body2">
             <Link
-              href="https://wa.me/35699939930"
+              href="https://wa.me/447957524469"
               target="_blank"
               rel="noopener noreferrer"
               color="inherit"
