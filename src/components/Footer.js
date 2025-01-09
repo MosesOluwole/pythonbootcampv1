@@ -42,8 +42,8 @@ const Footer = () => (
           </Typography>
           <Typography variant="body2">
             Email:{" "}
-            <Link href="mailto:oluwolemoses@gmail.com" color="inherit">
-              info@CodeWithMide.com
+            <Link href="mailto:codewithmide2025@gmail.com" color="inherit">
+              codewithmide2025@gmail.com
             </Link>
           </Typography>
           <Typography variant="body2">
