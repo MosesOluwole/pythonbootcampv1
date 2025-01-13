@@ -22,16 +22,32 @@ const Footer = () => (
             Empowering you to achieve your programming goals.
           </Typography>
           <Box sx={{ mt: 2 }}>
-            <Link href="https://facebook.com" color="inherit" sx={{ mx: 1 }}>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61571849575570"
+              color="inherit"
+              sx={{ mx: 1 }}
+            >
               <Facebook />
             </Link>
-            <Link href="https://twitter.com" color="inherit" sx={{ mx: 1 }}>
+            <Link
+              href="https://x.com/codewithmide25"
+              color="inherit"
+              sx={{ mx: 1 }}
+            >
               <Twitter />
             </Link>
-            <Link href="https://linkedin.com" color="inherit" sx={{ mx: 1 }}>
+            <Link
+              href="https://www.linkedin.com/in/code-withmide-b15a51345/"
+              color="inherit"
+              sx={{ mx: 1 }}
+            >
               <LinkedIn />
             </Link>
-            <Link href="https://instagram.com" color="inherit" sx={{ mx: 1 }}>
+            <Link
+              href="https://www.instagram.com/codewithmide25/"
+              color="inherit"
+              sx={{ mx: 1 }}
+            >
               <Instagram />
             </Link>
           </Box>
