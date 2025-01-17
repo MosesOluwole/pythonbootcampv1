@@ -16,7 +16,15 @@ const Footer = () => (
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" gutterBottom>
-            CodeWithMide
+            <img
+              src="/logo.png"
+              alt="CodeWithMide Logo"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                maxHeight: "50px", // Adjust size as needed
+              }}
+            />
           </Typography>
           <Typography variant="body2">
             Empowering you to achieve your programming goals.

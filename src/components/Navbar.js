@@ -13,7 +13,6 @@ import {
   Box,
   useTheme,
   useMediaQuery,
-  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -45,9 +44,7 @@ const Navbar = () => {
           textDecoration: "none",
           color: "inherit",
         }}
-      >
-        CodeWithMide
-      </Typography>
+      ></Typography>
       <List>
         {navLinks.map((item, index) => (
           <ListItem button component="a" href={item.path} key={index}>
@@ -72,7 +69,15 @@ const Navbar = () => {
               color: "inherit",
             }}
           >
-            CodeWithMide
+            <img
+              src="/logo.png"
+              alt="CodeWithMide Logo"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                maxHeight: "50px", // Adjust size as needed
+              }}
+            />
           </Typography>
           {isMobile ? (
             <IconButton
